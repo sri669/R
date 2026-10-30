@@ -1,0 +1,3275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102b24">
+<meta name="description" content="Discover Hilltop Haven in Kotagala, Sri Lanka — delicious food, warm hospitality and a refreshing hill-country atmosphere.">
+<title>Hilltop Haven | Mountain Dining in Kotagala</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --green: #123c30;
+    --green2: #28634c;
+    --gold: #d9b978;
+    --cream: #f5f3ec;
+    --paper: #fff;
+    --ink: #1d3028;
+    --muted: #6d7c73;
+    --line: rgba(25,60,45,.13);
+    --shadow: 0 18px 55px rgba(15,45,32,.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    transition: background .3s, color .3s;
+}
+
+body.dark {
+    --cream: #101e19;
+    --paper: #1a2d24;
+    --ink: #eef3ed;
+    --muted: #b2c1b7;
+    --line: rgba(230,240,230,.13);
+    --shadow: 0 18px 55px rgba(0,0,0,.22);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(1160px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--green2);
+}
+
+body.dark .eyebrow {
+    color: var(--gold);
+}
+
+.section-head {
+    text-align: center;
+    max-width: 690px;
+    margin: 0 auto 46px;
+}
+
+.section-head h2,
+.story h2,
+.reserve-copy h2 {
+    font: 600 clamp(2.3rem,5vw,3.8rem)/1.12 "Playfair Display", serif;
+    margin: 15px 0;
+}
+
+.section-head p,
+.muted {
+    color: var(--muted);
+    line-height: 1.85;
+}
+
+/* Navigation */
+
+header {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 auto;
+    background: rgba(245,243,236,.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--line);
+}
+
+body.dark header {
+    background: rgba(16,30,25,.9);
+}
+
+.nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.brand {
+    font: 700 1.5rem "Playfair Display", serif;
+    color: var(--green);
+    white-space: nowrap;
+}
+
+body.dark .brand {
+    color: var(--gold);
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.navlinks a {
+    font-size: .87rem;
+    font-weight: 600;
+    transition: color .2s;
+}
+
+.navlinks a:hover {
+    color: #b48a43;
+}
+
+.navtools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn,
+.menu-toggle {
+    height: 41px;
+    width: 41px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ink);
+}
+
+.menu-toggle {
+    display: none;
+    border-radius: 9px;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 14px 23px;
+    border-radius: 5px;
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: white;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--green2);
+}
+
+.btn.gold {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #1d3428;
+}
+
+.btn.outline {
+    background: transparent;
+    border-color: rgba(255,255,255,.7);
+    color: white;
+}
+
+/* Hero section */
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    background:
+        linear-gradient(90deg,rgba(5,24,18,.86),rgba(5,24,18,.45),rgba(5,24,18,.08)),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat;
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 130px;
+    background: linear-gradient(transparent,rgba(5,24,18,.35));
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    padding-top: 90px;
+    animation: rise .9s both;
+}
+
+.pill {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 30px;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+    font-size: .75rem;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(8px);
+}
+
+.hero h1 {
+    font: 600 clamp(3.4rem,8vw,7rem)/.98 "Playfair Display", serif;
+    margin: 27px 0;
+}
+
+.hero h1 em {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 570px;
+    color: #e9eee9;
+    line-height: 1.9;
+    font-size: 1.06rem;
+    margin-bottom: 30px;
+}
+
+.actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.hero-meta {
+    margin-top: 55px;
+    color: #e1e9e2;
+    letter-spacing: 2px;
+    font-size: .76rem;
+}
+
+/* Highlights */
+
+.highlights {
+    background: var(--green);
+    color: white;
+    padding: 26px 0;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.highlight .emoji {
+    font-size: 1.7rem;
+}
+
+.highlight strong {
+    display: block;
+    font-size: .95rem;
+}
+
+.highlight small {
+    color: #c6d7cb;
+}
+
+/* About section */
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.story-photo {
+    position: relative;
+}
+
+.story-photo img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.photo-tag {
+    position: absolute;
+    right: -18px;
+    bottom: 28px;
+    background: var(--gold);
+    color: #1d3428;
+    padding: 20px 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.photo-tag strong {
+    display: block;
+    font: 700 1.5rem "Playfair Display", serif;
+}
+
+.story h2 {
+    margin: 15px 0 20px;
+}
+
+.story p {
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+.story-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+    margin: 25px 0;
+}
+
+.story-points div {
+    background: var(--paper);
+    padding: 17px;
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+}
+
+.story-points strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Menu section */
+
+.menu-section {
+    background: var(--paper);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filter {
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    padding: 10px 18px;
+    border-radius: 30px;
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--green);
+    color: white;
+    border-color: var(--green);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+
+.dish {
+    background: var(--cream);
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.dish:hover {
+    transform: translateY(-7px);
+}
+
+.dish.hide {
+    display: none;
+}
+
+.dish img {
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dish-info {
+    padding: 21px;
+}
+
+.dish h3 {
+    font: 600 1.35rem "Playfair Display", serif;
+    margin-bottom: 9px;
+}
+
+.dish p {
+    font-size: .9rem;
+    color: var(--muted);
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.dish-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    font-weight: 700;
+}
+
+.price {
+    color: #b48a43;
+}
+
+/* Experience */
+
+.experience {
+    color: white;
+    background:
+        linear-gradient(rgba(12,43,31,.88),rgba(12,43,31,.88)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85") center/cover fixed;
+}
+
+.experience .section-head p {
+    color: #d7e2d9;
+}
+
+.experience .eyebrow {
+    color: var(--gold);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.experience-card {
+    padding: 32px 27px;
+    border: 1px solid rgba(255,255,255,.22);
+    background: rgba(255,255,255,.07);
+    backdrop-filter: blur(9px);
+    border-radius: 9px;
+    transition: .3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,.13);
+}
+
+.experience-card .emoji {
+    font-size: 2.2rem;
+}
+
+.experience-card h3 {
+    font: 600 1.45rem "Playfair Display", serif;
+    margin: 17px 0 10px;
+}
+
+.experience-card p {
+    color: #d4dfd6;
+    line-height: 1.8;
+}
+
+/* Gallery */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 14px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.gallery-item:first-child {
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Reviews */
+
+.reviews {
+    background: var(--paper);
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.review {
+    padding: 28px;
+    background: var(--cream);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.stars {
+    color: #d8a94c;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.review p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.review strong {
+    font-size: .9rem;
+}
+
+/* Reservation */
+
+.reservation {
+    background: var(--green);
+    color: white;
+}
+
+.reserve-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.reserve-copy .eyebrow {
+    color: var(--gold);
+}
+
+.reserve-copy h2 {
+    margin: 18px 0;
+}
+
+.reserve-copy p {
+    color: #d2ded5;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.contact-line {
+    margin-top: 22px;
+    line-height: 2;
+    color: #e0e9e2;
+}
+
+.form-card {
+    background: white;
+    color: #24372d;
+    padding: 32px;
+    border-radius: 9px;
+}
+
+.form-card h3 {
+    font: 600 1.8rem "Playfair Display", serif;
+    margin-bottom: 23px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field.full {
+    grid-column: 1/-1;
+}
+
+.field label {
+    display: block;
+    font-size: .82rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d7ded7;
+    border-radius: 5px;
+    background: #fafbf8;
+    color: #26362f;
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: #28634c;
+    box-shadow: 0 0 0 3px rgba(40,99,76,.1);
+}
+
+.submit {
+    width: 100%;
+}
+
+.form-msg {
+    font-size: .88rem;
+    line-height: 1.6;
+    margin-top: 13px;
+    color: #28634c;
+}
+
+/* Contact */
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.location-card {
+    background: var(--paper);
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.location-card h3 {
+    font: 600 1.8rem "Playfair Display", serif;
+    margin: 13px 0;
+}
+
+.location-card p {
+    color: var(--muted);
+    line-height: 2;
+}
+
+.map {
+    width: 100%;
+    height: 360px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Newsletter */
+
+.newsletter {
+    text-align: center;
+    background: #e9e6dc;
+    color: #20382b;
+    padding: 55px 0;
+}
+
+.newsletter h2 {
+    font: 600 2rem "Playfair Display", serif;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: #617064;
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 8px;
+    max-width: 490px;
+    margin: auto;
+}
+
+.newsletter input {
+    min-width: 0;
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #d0d7cd;
+    border-radius: 5px;
+}
+
+/* Footer */
+
+footer {
+    background: #10291f;
+    color: white;
+    padding: 52px 0 23px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 32px;
+}
+
+footer h3 {
+    font: 600 1.45rem "Playfair Display", serif;
+    margin-bottom: 15px;
+}
+
+footer p,
+footer a {
+    color: #c4d1c7;
+    line-height: 2;
+    font-size: .9rem;
+}
+
+footer a:hover {
+    color: var(--gold);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.15);
+    padding-top: 20px;
+    color: #b7c8bc;
+    font-size: .82rem;
+}
+
+/* Floating buttons */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 900;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #25d366;
+    color: white;
+    font-size: 1.7rem;
+    box-shadow: 0 5px 20px #0003;
+    transition: .2s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+
+.top {
+    position: fixed;
+    left: 22px;
+    bottom: 22px;
+    z-index: 900;
+    width: 43px;
+    height: 43px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #20382b;
+    font-size: 1.2rem;
+    display: none;
+}
+
+.top.show {
+    display: block;
+}
+
+/* Animations */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .75s, transform .75s;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Responsive design */
+
+@media(max-width:950px) {
+    .navlinks {
+        gap: 14px;
+    }
+
+    .navlinks a {
+        font-size: .8rem;
+    }
+
+    .nav-book {
+        display: none;
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .story-grid,
+    .reserve-grid {
+        gap: 35px;
+    }
+}
+
+@media(max-width:720px) {
+    .section {
+        padding: 75px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navlinks {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 24px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--cream);
+        box-shadow: var(--shadow);
+    }
+
+    .navlinks.open {
+        display: flex;
+    }
+
+    .navlinks a {
+        font-size: 1rem;
+    }
+
+    .hero {
+        min-height: 90svh;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem,13vw,4.8rem);
+    }
+
+    .story-grid,
+    .reserve-grid,
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-photo img {
+        height: 400px;
+    }
+
+    .photo-tag {
+        right: 10px;
+    }
+
+    .experience-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 210px 170px 170px;
+    }
+
+    .gallery-item:first-child {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media(max-width:480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .highlight-grid {
+        gap: 20px 10px;
+    }
+
+    .highlight {
+        justify-content: flex-start;
+    }
+
+    .highlight small {
+        font-size: .72rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+
+    .story-points {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-rows: 210px 145px 145px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+<nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="#home">HILLTOP <span>HAVEN.</span></a>
+
+    <ul class="navlinks" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="navtools">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+        <a class="btn nav-book" href="#reservation">Book a Table</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+    <span class="pill">KOTAGALA · SRI LANKA</span>
+    <h1>Escape to<br>the <em>Highlands.</em></h1>
+    <p>Discover a place where delicious food, cool mountain air and warm hospitality come together. Welcome to your little haven in the hills.</p>
+
+    <div class="actions">
+        <a class="btn gold" href="#menu">Explore Our Menu ↗</a>
+        <a class="btn outline" href="#reservation">Reserve Your Table</a>
+    </div>
+
+    <div class="hero-meta">✦ FRESH FLAVOURS &nbsp; ✦ HILL COUNTRY CHARM &nbsp; ✦ GOOD MOMENTS</div>
+</div>
+</div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights">
+<div class="container highlight-grid">
+    <div class="highlight"><span class="emoji">🌿</span><div><strong>Fresh Flavours</strong><small>Made with care</small></div></div>
+    <div class="highlight"><span class="emoji">🏔️</span><div><strong>Hill Country</strong><small>Relaxing atmosphere</small></div></div>
+    <div class="highlight"><span class="emoji">☕</span><div><strong>Tea & Coffee</strong><small>Comfort in every cup</small></div></div>
+    <div class="highlight"><span class="emoji">♡</span><div><strong>Warm Welcome</strong><small>Memories made here</small></div></div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="story">
+<div class="container story-grid">
+
+    <div class="story-photo reveal">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85" alt="Beautifully presented restaurant dining" loading="lazy">
+        <div class="photo-tag"><strong>HILLTOP</strong>COUNTRY DINING</div>
+    </div>
+
+    <div class="story reveal">
+        <span class="eyebrow">A Taste of the Highlands</span>
+        <h2>Good Food.<br>Cool Breezes.<br>Beautiful Moments.</h2>
+
+        <p>Welcome to Hilltop Haven, a restaurant experience inspired by the natural beauty of Kotagala. Our aim is to bring people together over satisfying food in a peaceful hill-country setting.</p>
+
+        <p>Whether you are stopping by for breakfast, enjoying a warm cup of Ceylon tea or sharing a meal with friends, make every visit a special memory.</p>
+
+        <div class="story-points">
+            <div><strong>🍃 Fresh Ingredients</strong><small>Thoughtfully prepared dishes</small></div>
+            <div><strong>☕ Highland Comfort</strong><small>A relaxing place to unwind</small></div>
+        </div>
+
+        <a href="#reservation" class="btn">Plan Your Visit →</a>
+    </div>
+
+</div>
+</section>
+
+<!-- MENU -->
+<section class="section menu-section" id="menu">
+<div class="container">
+
+    <div class="section-head reveal">
+        <span class="eyebrow">Our Kitchen</span>
+        <h2>Flavours Worth the Journey</h2>
+        <p>Discover comforting favourites, refreshing drinks and delicious meals for every moment.</p>
+    </div>
+
+    <div class="filters reveal">
+        <button class="filter active" data-filter="all">All Items</button>
+        <button class="filter" data-filter="meals">Main Meals</button>
+        <button class="filter" data-filter="snacks">Snacks</button>
+        <button class="filter" data-filter="drinks">Drinks</button>
+        <button class="filter" data-filter="desserts">Desserts</button>
+    </div>
+
+    <div class="menu-grid">
+
+        <article class="dish reveal" data-category="meals">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Rice and curry meal" loading="lazy">
+            <div class="dish-info">
+                <h3>Highland Rice Plate</h3>
+                <p>A comforting meal with rice and a selection of curries.</p>
+                <div class="dish-bottom"><span class="price">LKR 850</span><span>🍛</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="meals">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="Noodles with vegetables" loading="lazy">
+            <div class="dish-info">
+                <h3>Garden Noodles</h3>
+                <p>Stir-fried noodles with vegetables and aromatic seasoning.</p>
+                <div class="dish-bottom"><span class="price">LKR 750</span><span>🍜</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="snacks">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80" alt="Crispy potato fries" loading="lazy">
+            <div class="dish-info">
+                <h3>Crispy Mountain Fries</h3>
+                <p>Golden potato fries, perfect for a quick snack.</p>
+                <div class="dish-bottom"><span class="price">LKR 450</span><span>🍟</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="drinks">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Freshly brewed tea" loading="lazy">
+            <div class="dish-info">
+                <h3>Ceylon Tea</h3>
+                <p>A comforting cup inspired by Sri Lanka's famous tea country.</p>
+                <div class="dish-bottom"><span class="price">LKR 250</span><span>🍵</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="drinks">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Iced coffee" loading="lazy">
+            <div class="dish-info">
+                <h3>Chilled Iced Coffee</h3>
+                <p>A refreshing coffee for a relaxed afternoon.</p>
+                <div class="dish-bottom"><span class="price">LKR 500</span><span>🧋</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="desserts">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Chocolate cake" loading="lazy">
+            <div class="dish-info">
+                <h3>Chocolate Cake</h3>
+                <p>A sweet treat to complete your dining experience.</p>
+                <div class="dish-bottom"><span class="price">LKR 550</span><span>🍰</span></div>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="muted" style="text-align:center;margin-top:25px;font-size:.82rem">
+        Sample menu and prices — update these with your confirmed restaurant offerings.
+    </p>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section experience" id="experience">
+<div class="container">
+
+    <div class="section-head reveal">
+        <span class="eyebrow">The Hilltop Haven Experience</span>
+        <h2>More Than Just a Meal</h2>
+        <p>Come for the food. Stay for the atmosphere. Create beautiful moments in the heart of the highlands.</p>
+    </div>
+
+    <div class="experience-grid">
+        <div class="experience-card reveal">
+            <div class="emoji">🌄</div>
+            <h3>Mountain Moments</h3>
+            <p>Take a break from the everyday and enjoy the peaceful character of the hill country.</p>
+        </div>
+
+        <div class="experience-card reveal">
+            <div class="emoji">🍽️</div>
+            <h3>Food with Feeling</h3>
+            <p>Enjoy comforting meals, snacks and drinks in a welcoming environment.</p>
+        </div>
+
+        <div class="experience-card reveal">
+            <div class="emoji">👨‍👩‍👧‍👦</div>
+            <h3>Moments Together</h3>
+            <p>A welcoming place for family lunches, friendly conversations and special occasions.</p>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+<div class="container">
+
+    <div class="section-head reveal">
+        <span class="eyebrow">Visual Stories</span>
+        <h2>A Little Taste of Paradise</h2>
+        <p>Food, nature and beautiful spaces come together.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85" alt="Green mountain landscape" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Restaurant interior" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=85" alt="Fresh food ingredients" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=85" alt="Restaurant dining space" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=85" alt="Coffee in a cafe" loading="lazy"></div>
+    </div>
+
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews">
+<div class="container">
+
+    <div class="section-head reveal">
+        <span class="eyebrow">Guest Experiences</span>
+        <h2>Words from Our Guests</h2>
+        <p>Real guest feedback helps others discover your restaurant.</p>
+    </div>
+
+    <div class="review-grid">
+        <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>“A peaceful place to enjoy comforting food and spend quality time.”</p>
+            <strong>Guest Review</strong>
+        </article>
+
+        <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>“A lovely setting for a relaxing break and a warm cup of tea.”</p>
+            <strong>Guest Review</strong>
+        </article>
+
+        <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>“A welcoming atmosphere with a beautiful hill-country feel.”</p>
+            <strong>Guest Review</strong>
+        </article>
+    </div>
+
+    <p class="muted" style="text-align:center;margin-top:18px;font-size:.82rem">
+        Sample testimonials — replace with genuine customer reviews before publishing.
+    </p>
+
+</div>
+</section>
+
+<!-- RESERVATION -->
+<section class="section reservation" id="reservation">
+<div class="container reserve-grid">
+
+    <div class="reserve-copy reveal">
+        <span class="eyebrow">Your Table Awaits</span>
+        <h2>Make Your Visit Special.</h2>
+        <p>Planning a family meal, a get-together or a relaxing afternoon in Kotagala? Send us your reservation request directly through WhatsApp.</p>
+        <a href="#contact" class="btn gold">Contact Our Team →</a>
+
+        <div class="contact-line">
+            📍 Kotagala, Sri Lanka<br>
+            📱 +94 77 818 0155<br>
+            🕒 Please confirm opening hours with the restaurant.
+        </div>
+    </div>
+
+    <form class="form-card reveal" id="bookingForm">
+        <h3>Reserve a Table</h3>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="guestName">Full Name</label>
+                <input id="guestName" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+                <label for="guestPhone">Phone Number</label>
+                <input id="guestPhone" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel" required>
+            </div>
+
+            <div class="field">
+                <label for="bookingDate">Date</label>
+                <input id="bookingDate" name="date" type="date" required>
+            </div>
+
+            <div class="field">
+                <label for="bookingTime">Time</label>
+                <select id="bookingTime" name="time" required>
+                    <option value="">Select time</option>
+                    <option>09:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>01:00 PM</option>
+                    <option>02:00 PM</option>
+                    <option>03:00 PM</option>
+                    <option>04:00 PM</option>
+                    <option>05:00 PM</option>
+                    <option>06:00 PM</option>
+                    <option>07:00 PM</option>
+                    <option>08:00 PM</option>
+                </select>
+            </div>
+
+            <div class="field full">
+                <label for="guestCount">Number of Guests</label>
+                <select id="guestCount" name="guests" required>
+                    <option value="">Select guests</option>
+                    <option>1 guest</option>
+                    <option>2 guests</option>
+                    <option>3 guests</option>
+                    <option>4 guests</option>
+                    <option>5 guests</option>
+                    <option>6 guests</option>
+                    <option>7 or more guests</option>
+                </select>
+            </div>
+
+            <div class="field full">
+                <label for="guestMessage">Special Requests (Optional)</label>
+                <textarea id="guestMessage" name="message" rows="3" placeholder="Tell us about your requirements"></textarea>
+            </div>
+
+        </div>
+
+        <button class="btn submit" type="submit">Send Reservation on WhatsApp ↗</button>
+
+        <p class="form-msg" id="bookingMessage" role="status" aria-live="polite">
+            Your reservation is a request and is confirmed only after the restaurant replies.
+        </p>
+    </form>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<div class="container location-grid">
+
+    <div class="location-card reveal">
+        <span class="eyebrow">Find Us</span>
+        <h3>Visit Hilltop Haven</h3>
+
+        <p>
+            <strong>Location:</strong> Kotagala, Sri Lanka<br>
+            <strong>Phone:</strong> +94 77 818 0155<br>
+            <strong>Email:</strong> Add your restaurant email<br>
+            <strong>Opening Hours:</strong> Add confirmed opening hours
+        </p>
+
+        <br>
+
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kotagala%2C%20Sri%20Lanka" target="_blank" rel="noopener noreferrer">
+            Open Google Maps ↗
+        </a>
+    </div>
+
+    <iframe
+        class="map reveal"
+        title="Map of Kotagala, Sri Lanka"
+        src="https://maps.google.com/maps?q=Kotagala%2C%20Sri%20Lanka&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+    </iframe>
+
+</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+<div class="container">
+    <h2>Stay in the Loop 🌿</h2>
+    <p>Hear about seasonal menus, special events and restaurant news.</p>
+
+    <form id="newsletterForm">
+        <label for="newsletterEmail" style="position:absolute;left:-9999px">Email address</label>
+        <input id="newsletterEmail" type="email" placeholder="Enter your email address" required>
+        <button class="btn" type="submit">Subscribe</button>
+    </form>
+
+    <p id="newsletterMessage" role="status" aria-live="polite" style="margin-top:13px"></p>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>HILLTOP HAVEN.</h3>
+            <p>A hill-country dining experience inspired by Kotagala, Sri Lanka. Good food, warm hospitality and beautiful moments.</p>
+        </div>
+
+        <div>
+            <h3>Explore</h3>
+            <div class="footer-links">
+                <a href="#story">Our Story</a>
+                <a href="#menu">Food Menu</a>
+                <a href="#experience">Experience</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+        </div>
+
+        <div>
+            <h3>Plan Your Visit</h3>
+            <div class="footer-links">
+                <a href="#reservation">Reservations</a>
+                <a href="#contact">Location</a>
+                <a href="https://wa.me/94778180155" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © <span id="currentYear"></span> Hilltop Haven. All rights reserved.
+    </div>
+
+</div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a class="whatsapp"
+   href="https://wa.me/94778180155?text=Hello%20Hilltop%20Haven%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact Hilltop Haven on WhatsApp">☏</a>
+
+<button class="top" id="backTop" aria-label="Back to top">↑</button>
+
+<!-- JAVASCRIPT -->
+<script>
+
+// WhatsApp number: country code + number without the leading zero.
+const WHATSAPP_NUMBER = "94778180155";
+
+// Mobile navigation
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    menuToggle.textContent = open ? "✕" : "☰";
+});
+
+document.querySelectorAll(".navlinks a").forEach(a => {
+    a.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// Dark mode
+const themeToggle = document.getElementById("themeToggle");
+
+try {
+    if (localStorage.getItem("hilltopHavenTheme") === "dark") {
+        document.body.classList.add("dark");
+        themeToggle.textContent = "☀";
+    }
+} catch(e) {}
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    const dark = document.body.classList.contains("dark");
+    themeToggle.textContent = dark ? "☀" : "☾";
+
+    try {
+        localStorage.setItem("hilltopHavenTheme", dark ? "dark" : "light");
+    } catch(e) {}
+});
+
+// Menu category filters
+const filterButtons = document.querySelectorAll(".filter");
+const dishes = document.querySelectorAll(".dish");
+
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const category = btn.dataset.filter;
+
+        dishes.forEach(d => {
+            d.classList.toggle(
+                "hide",
+                category !== "all" && d.dataset.category !== category
+            );
+        });
+    });
+});
+
+// Scroll reveal animation
+const revealItems = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: .12 });
+
+    revealItems.forEach(el => observer.observe(el));
+
+} else {
+    revealItems.forEach(el => el.classList.add("visible"));
+}
+
+// Back to top button
+const backTop = document.getElementById("backTop");
+
+window.addEventListener("scroll", () => {
+    backTop.classList.toggle("show", window.scrollY > 500);
+}, { passive: true });
+
+backTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Set minimum reservation date to today
+const dateInput = document.getElementById("bookingDate");
+const today = new Date();
+
+const localToday = new Date(
+    today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().slice(0, 10);
+
+dateInput.min = localToday;
+
+// WhatsApp reservation form
+document.getElementById("bookingForm").addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    if (!form.reportValidity()) return;
+
+    const data = new FormData(form);
+
+    const details = [
+        "Hello Hilltop Haven!",
+        "",
+        "I would like to request a table reservation.",
+        "",
+        "Name: " + data.get("name"),
+        "Phone: " + data.get("phone"),
+        "Date: " + data.get("date"),
+        "Time: " + data.get("time"),
+        "Guests: " + data.get("guests"),
+        "Special requests: " + (data.get("message") || "None"),
+        "",
+        "Please confirm availability. Thank you!"
+    ].join("\n");
+
+    document.getElementById("bookingMessage").textContent =
+        "Opening WhatsApp. Your reservation is confirmed only after the restaurant replies.";
+
+    window.open(
+        "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(details),
+        "_blank",
+        "noopener,noreferrer"
+    );
+});
+
+// Newsletter form
+document.getElementById("newsletterForm").addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    document.getElementById("newsletterMessage").textContent =
+        "Thanks for your interest! Connect an email marketing service to collect subscriptions.";
+
+    event.currentTarget.reset();
+});
+
+// Automatic copyright year
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
+
+
+v<meta name="description" content="Discover Hilltop Haven in Kotagala, Sri Lanka — delicious food, warm hospitality and a refreshing hill-country atmosphere.">
+<title>Hilltop Haven | Mountain Dining in Kotagala</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --green: #123c30;
+    --green2: #28634c;
+    --gold: #d9b978;
+    --cream: #f5f3ec;
+    --paper: #fff;
+    --ink: #1d3028;
+    --muted: #6d7c73;
+    --line: rgba(25,60,45,.13);
+    --shadow: 0 18px 55px rgba(15,45,32,.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    transition: background .3s, color .3s;
+}
+
+body.dark {
+    --cream: #101e19;
+    --paper: #1a2d24;
+    --ink: #eef3ed;
+    --muted: #b2c1b7;
+    --line: rgba(230,240,230,.13);
+    --shadow: 0 18px 55px rgba(0,0,0,.22);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(1160px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.eyebrow {
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--green2);
+}
+
+body.dark .eyebrow {
+    color: var(--gold);
+}
+
+.section-head {
+    text-align: center;
+    max-width: 690px;
+    margin: 0 auto 46px;
+}
+
+.section-head h2,
+.story h2,
+.reserve-copy h2 {
+    font: 600 clamp(2.3rem,5vw,3.8rem)/1.12 "Playfair Display", serif;
+    margin: 15px 0;
+}
+
+.section-head p,
+.muted {
+    color: var(--muted);
+    line-height: 1.85;
+}
+
+/* Navigation */
+
+header {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 auto;
+    background: rgba(245,243,236,.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--line);
+}
+
+body.dark header {
+    background: rgba(16,30,25,.9);
+}
+
+.nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+}
+
+.brand {
+    font: 700 1.5rem "Playfair Display", serif;
+    color: var(--green);
+    white-space: nowrap;
+}
+
+body.dark .brand {
+    color: var(--gold);
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.navlinks a {
+    font-size: .87rem;
+    font-weight: 600;
+    transition: color .2s;
+}
+
+.navlinks a:hover {
+    color: #b48a43;
+}
+
+.navtools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn,
+.menu-toggle {
+    height: 41px;
+    width: 41px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ink);
+}
+
+.menu-toggle {
+    display: none;
+    border-radius: 9px;
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 14px 23px;
+    border-radius: 5px;
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: white;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: var(--green2);
+}
+
+.btn.gold {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #1d3428;
+}
+
+.btn.outline {
+    background: transparent;
+    border-color: rgba(255,255,255,.7);
+    color: white;
+}
+
+/* Hero section */
+
+.hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+    background:
+        linear-gradient(90deg,rgba(5,24,18,.86),rgba(5,24,18,.45),rgba(5,24,18,.08)),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=85") center/cover no-repeat;
+}
+
+.hero:after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 130px;
+    background: linear-gradient(transparent,rgba(5,24,18,.35));
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    padding-top: 90px;
+    animation: rise .9s both;
+}
+
+.pill {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 30px;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+    font-size: .75rem;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(8px);
+}
+
+.hero h1 {
+    font: 600 clamp(3.4rem,8vw,7rem)/.98 "Playfair Display", serif;
+    margin: 27px 0;
+}
+
+.hero h1 em {
+    color: var(--gold);
+}
+
+.hero p {
+    max-width: 570px;
+    color: #e9eee9;
+    line-height: 1.9;
+    font-size: 1.06rem;
+    margin-bottom: 30px;
+}
+
+.actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.hero-meta {
+    margin-top: 55px;
+    color: #e1e9e2;
+    letter-spacing: 2px;
+    font-size: .76rem;
+}
+
+/* Highlights */
+
+.highlights {
+    background: var(--green);
+    color: white;
+    padding: 26px 0;
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.highlight .emoji {
+    font-size: 1.7rem;
+}
+
+.highlight strong {
+    display: block;
+    font-size: .95rem;
+}
+
+.highlight small {
+    color: #c6d7cb;
+}
+
+/* About section */
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.story-photo {
+    position: relative;
+}
+
+.story-photo img {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.photo-tag {
+    position: absolute;
+    right: -18px;
+    bottom: 28px;
+    background: var(--gold);
+    color: #1d3428;
+    padding: 20px 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.photo-tag strong {
+    display: block;
+    font: 700 1.5rem "Playfair Display", serif;
+}
+
+.story h2 {
+    margin: 15px 0 20px;
+}
+
+.story p {
+    color: var(--muted);
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+.story-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+    margin: 25px 0;
+}
+
+.story-points div {
+    background: var(--paper);
+    padding: 17px;
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+}
+
+.story-points strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* Menu section */
+
+.menu-section {
+    background: var(--paper);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filter {
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    padding: 10px 18px;
+    border-radius: 30px;
+}
+
+.filter.active,
+.filter:hover {
+    background: var(--green);
+    color: white;
+    border-color: var(--green);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+}
+
+.dish {
+    background: var(--cream);
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.dish:hover {
+    transform: translateY(-7px);
+}
+
+.dish.hide {
+    display: none;
+}
+
+.dish img {
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dish-info {
+    padding: 21px;
+}
+
+.dish h3 {
+    font: 600 1.35rem "Playfair Display", serif;
+    margin-bottom: 9px;
+}
+
+.dish p {
+    font-size: .9rem;
+    color: var(--muted);
+    line-height: 1.7;
+    min-height: 48px;
+}
+
+.dish-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    font-weight: 700;
+}
+
+.price {
+    color: #b48a43;
+}
+
+/* Experience */
+
+.experience {
+    color: white;
+    background:
+        linear-gradient(rgba(12,43,31,.88),rgba(12,43,31,.88)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85") center/cover fixed;
+}
+
+.experience .section-head p {
+    color: #d7e2d9;
+}
+
+.experience .eyebrow {
+    color: var(--gold);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.experience-card {
+    padding: 32px 27px;
+    border: 1px solid rgba(255,255,255,.22);
+    background: rgba(255,255,255,.07);
+    backdrop-filter: blur(9px);
+    border-radius: 9px;
+    transition: .3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,.13);
+}
+
+.experience-card .emoji {
+    font-size: 2.2rem;
+}
+
+.experience-card h3 {
+    font: 600 1.45rem "Playfair Display", serif;
+    margin: 17px 0 10px;
+}
+
+.experience-card p {
+    color: #d4dfd6;
+    line-height: 1.8;
+}
+
+/* Gallery */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    gap: 14px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.gallery-item:first-child {
+    grid-row: span 2;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Reviews */
+
+.reviews {
+    background: var(--paper);
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.review {
+    padding: 28px;
+    background: var(--cream);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.stars {
+    color: #d8a94c;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.review p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.review strong {
+    font-size: .9rem;
+}
+
+/* Reservation */
+
+.reservation {
+    background: var(--green);
+    color: white;
+}
+
+.reserve-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.reserve-copy .eyebrow {
+    color: var(--gold);
+}
+
+.reserve-copy h2 {
+    margin: 18px 0;
+}
+
+.reserve-copy p {
+    color: #d2ded5;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.contact-line {
+    margin-top: 22px;
+    line-height: 2;
+    color: #e0e9e2;
+}
+
+.form-card {
+    background: white;
+    color: #24372d;
+    padding: 32px;
+    border-radius: 9px;
+}
+
+.form-card h3 {
+    font: 600 1.8rem "Playfair Display", serif;
+    margin-bottom: 23px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field.full {
+    grid-column: 1/-1;
+}
+
+.field label {
+    display: block;
+    font-size: .82rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d7ded7;
+    border-radius: 5px;
+    background: #fafbf8;
+    color: #26362f;
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: #28634c;
+    box-shadow: 0 0 0 3px rgba(40,99,76,.1);
+}
+
+.submit {
+    width: 100%;
+}
+
+.form-msg {
+    font-size: .88rem;
+    line-height: 1.6;
+    margin-top: 13px;
+    color: #28634c;
+}
+
+/* Contact */
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.location-card {
+    background: var(--paper);
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.location-card h3 {
+    font: 600 1.8rem "Playfair Display", serif;
+    margin: 13px 0;
+}
+
+.location-card p {
+    color: var(--muted);
+    line-height: 2;
+}
+
+.map {
+    width: 100%;
+    height: 360px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Newsletter */
+
+.newsletter {
+    text-align: center;
+    background: #e9e6dc;
+    color: #20382b;
+    padding: 55px 0;
+}
+
+.newsletter h2 {
+    font: 600 2rem "Playfair Display", serif;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: #617064;
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 8px;
+    max-width: 490px;
+    margin: auto;
+}
+
+.newsletter input {
+    min-width: 0;
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #d0d7cd;
+    border-radius: 5px;
+}
+
+/* Footer */
+
+footer {
+    background: #10291f;
+    color: white;
+    padding: 52px 0 23px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 32px;
+}
+
+footer h3 {
+    font: 600 1.45rem "Playfair Display", serif;
+    margin-bottom: 15px;
+}
+
+footer p,
+footer a {
+    color: #c4d1c7;
+    line-height: 2;
+    font-size: .9rem;
+}
+
+footer a:hover {
+    color: var(--gold);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.15);
+    padding-top: 20px;
+    color: #b7c8bc;
+    font-size: .82rem;
+}
+
+/* Floating buttons */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 900;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #25d366;
+    color: white;
+    font-size: 1.7rem;
+    box-shadow: 0 5px 20px #0003;
+    transition: .2s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+
+.top {
+    position: fixed;
+    left: 22px;
+    bottom: 22px;
+    z-index: 900;
+    width: 43px;
+    height: 43px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #20382b;
+    font-size: 1.2rem;
+    display: none;
+}
+
+.top.show {
+    display: block;
+}
+
+/* Animations */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .75s, transform .75s;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Responsive design */
+
+@media(max-width:950px) {
+    .navlinks {
+        gap: 14px;
+    }
+
+    .navlinks a {
+        font-size: .8rem;
+    }
+
+    .nav-book {
+        display: none;
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .story-grid,
+    .reserve-grid {
+        gap: 35px;
+    }
+}
+
+@media(max-width:720px) {
+    .section {
+        padding: 75px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navlinks {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 24px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--cream);
+        box-shadow: var(--shadow);
+    }
+
+    .navlinks.open {
+        display: flex;
+    }
+
+    .navlinks a {
+        font-size: 1rem;
+    }
+
+    .hero {
+        min-height: 90svh;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem,13vw,4.8rem);
+    }
+
+    .story-grid,
+    .reserve-grid,
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-photo img {
+        height: 400px;
+    }
+
+    .photo-tag {
+        right: 10px;
+    }
+
+    .experience-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 210px 170px 170px;
+    }
+
+    .gallery-item:first-child {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media(max-width:480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .highlight-grid {
+        gap: 20px 10px;
+    }
+
+    .highlight {
+        justify-content: flex-start;
+    }
+
+    .highlight small {
+        font-size: .72rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+
+    .story-points {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-rows: 210px 145px 145px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+<nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="#home">HILLTOP <span>HAVEN.</span></a>
+
+    <ul class="navlinks" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="navtools">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">☾</button>
+        <a class="btn nav-book" href="#reservation">Book a Table</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+    <span class="pill">KOTAGALA · SRI LANKA</span>
+    <h1>Escape to<br>the <em>Highlands.</em></h1>
+    <p>Discover a place where delicious food, cool mountain air and warm hospitality come together. Welcome to your little haven in the hills.</p>
+
+    <div class="actions">
+        <a class="btn gold" href="#menu">Explore Our Menu ↗</a>
+        <a class="btn outline" href="#reservation">Reserve Your Table</a>
+    </div>
+
+    <div class="hero-meta">✦ FRESH FLAVOURS &nbsp; ✦ HILL COUNTRY CHARM &nbsp; ✦ GOOD MOMENTS</div>
+</div>
+</div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="highlights">
+<div class="container highlight-grid">
+    <div class="highlight"><span class="emoji">🌿</span><div><strong>Fresh Flavours</strong><small>Made with care</small></div></div>
+    <div class="highlight"><span class="emoji">🏔️</span><div><strong>Hill Country</strong><small>Relaxing atmosphere</small></div></div>
+    <div class="highlight"><span class="emoji">☕</span><div><strong>Tea & Coffee</strong><small>Comfort in every cup</small></div></div>
+    <div class="highlight"><span class="emoji">♡</span><div><strong>Warm Welcome</strong><small>Memories made here</small></div></div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="story">
+<div class="container story-grid">
+
+    <div class="story-photo reveal">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=85" alt="Beautifully presented restaurant dining" loading="lazy">
+        <div class="photo-tag"><strong>HILLTOP</strong>COUNTRY DINING</div>
+    </div>
+
+    <div class="story reveal">
+        <span class="eyebrow">A Taste of the Highlands</span>
+        <h2>Good Food.<br>Cool Breezes.<br>Beautiful Moments.</h2>
+
+        <p>Welcome to Hilltop Haven, a restaurant experience inspired by the natural beauty of Kotagala. Our aim is to bring people together over satisfying food in a peaceful hill-country setting.</p>
+
+        <p>Whether you are stopping by for breakfast, enjoying a warm cup of Ceylon tea or sharing a meal with friends, make every visit a special memory.</p>
+
+        <div class="story-points">
+            <div><strong>🍃 Fresh Ingredients</strong><small>Thoughtfully prepared dishes</small></div>
+            <div><strong>☕ Highland Comfort</strong><small>A relaxing place to unwind</small></div>
+        </div>
+
+        <a href="#reservation" class="btn">Plan Your Visit →</a>
+    </div>
+
+</div>
+</section>
+
+<!-- MENU -->
+<section class="section menu-section" id="menu">
+<div class="container">
+
+    <div class="section-head reveal">
+        <span class="eyebrow">Our Kitchen</span>
+        <h2>Flavours Worth the Journey</h2>
+        <p>Discover comforting favourites, refreshing drinks and delicious meals for every moment.</p>
+    </div>
+
+    <div class="filters reveal">
+        <button class="filter active" data-filter="all">All Items</button>
+        <button class="filter" data-filter="meals">Main Meals</button>
+        <button class="filter" data-filter="snacks">Snacks</button>
+        <button class="filter" data-filter="drinks">Drinks</button>
+        <button class="filter" data-filter="desserts">Desserts</button>
+    </div>
+
+    <div class="menu-grid">
+
+        <article class="dish reveal" data-category="meals">
+            <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Rice and curry meal" loading="lazy">
+            <div class="dish-info">
+                <h3>Highland Rice Plate</h3>
+                <p>A comforting meal with rice and a selection of curries.</p>
+                <div class="dish-bottom"><span class="price">LKR 850</span><span>🍛</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="meals">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="Noodles with vegetables" loading="lazy">
+            <div class="dish-info">
+                <h3>Garden Noodles</h3>
+                <p>Stir-fried noodles with vegetables and aromatic seasoning.</p>
+                <div class="dish-bottom"><span class="price">LKR 750</span><span>🍜</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="snacks">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80" alt="Crispy potato fries" loading="lazy">
+            <div class="dish-info">
+                <h3>Crispy Mountain Fries</h3>
+                <p>Golden potato fries, perfect for a quick snack.</p>
+                <div class="dish-bottom"><span class="price">LKR 450</span><span>🍟</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="drinks">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=80" alt="Freshly brewed tea" loading="lazy">
+            <div class="dish-info">
+                <h3>Ceylon Tea</h3>
+                <p>A comforting cup inspired by Sri Lanka's famous tea country.</p>
+                <div class="dish-bottom"><span class="price">LKR 250</span><span>🍵</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="drinks">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Iced coffee" loading="lazy">
+            <div class="dish-info">
+                <h3>Chilled Iced Coffee</h3>
+                <p>A refreshing coffee for a relaxed afternoon.</p>
+                <div class="dish-bottom"><span class="price">LKR 500</span><span>🧋</span></div>
+            </div>
+        </article>
+
+        <article class="dish reveal" data-category="desserts">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Chocolate cake" loading="lazy">
+            <div class="dish-info">
+                <h3>Chocolate Cake</h3>
+                <p>A sweet treat to complete your dining experience.</p>
+                <div class="dish-bottom"><span class="price">LKR 550</span><span>🍰</span></div>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="muted" style="text-align:center;margin-top:25px;font-size:.82rem">
+        Sample menu and prices — update these with your confirmed restaurant offerings.
+    </p>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section experience" id="experience">
+<div class="container">
+
+    <div class="section-head reveal">
+        <span class="eyebrow">The Hilltop Haven Experience</span>
+        <h2>More Than Just a Meal</h2>
+        <p>Come for the food. Stay for the atmosphere. Create beautiful moments in the heart of the highlands.</p>
+    </div>
+
+    <div class="experience-grid">
+        <div class="experience-card reveal">
+            <div class="emoji">🌄</div>
+            <h3>Mountain Moments</h3>
+            <p>Take a break from the everyday and enjoy the peaceful character of the hill country.</p>
+        </div>
+
+        <div class="experience-card reveal">
+            <div class="emoji">🍽️</div>
+            <h3>Food with Feeling</h3>
+            <p>Enjoy comforting meals, snacks and drinks in a welcoming environment.</p>
+        </div>
+
+        <div class="experience-card reveal">
+            <div class="emoji">👨‍👩‍👧‍👦</div>
+            <h3>Moments Together</h3>
+            <p>A welcoming place for family lunches, friendly conversations and special occasions.</p>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+<div class="container">
+
+    <div class="section-head reveal">
+        <span class="eyebrow">Visual Stories</span>
+        <h2>A Little Taste of Paradise</h2>
+        <p>Food, nature and beautiful spaces come together.</p>
+    </div>
+
+    <div class="gallery-grid reveal">
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85" alt="Green mountain landscape" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Restaurant interior" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=85" alt="Fresh food ingredients" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=85" alt="Restaurant dining space" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=85" alt="Coffee in a cafe" loading="lazy"></div>
+    </div>
+
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews">
+<div class="container">
+
+    <div class="section-head reveal">
+        <span class="eyebrow">Guest Experiences</span>
+        <h2>Words from Our Guests</h2>
+        <p>Real guest feedback helps others discover your restaurant.</p>
+    </div>
+
+    <div class="review-grid">
+        <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>“A peaceful place to enjoy comforting food and spend quality time.”</p>
+            <strong>Guest Review</strong>
+        </article>
+
+        <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>“A lovely setting for a relaxing break and a warm cup of tea.”</p>
+            <strong>Guest Review</strong>
+        </article>
+
+        <article class="review reveal">
+            <div class="stars">★★★★★</div>
+            <p>“A welcoming atmosphere with a beautiful hill-country feel.”</p>
+            <strong>Guest Review</strong>
+        </article>
+    </div>
+
+    <p class="muted" style="text-align:center;margin-top:18px;font-size:.82rem">
+        Sample testimonials — replace with genuine customer reviews before publishing.
+    </p>
+
+</div>
+</section>
+
+<!-- RESERVATION -->
+<section class="section reservation" id="reservation">
+<div class="container reserve-grid">
+
+    <div class="reserve-copy reveal">
+        <span class="eyebrow">Your Table Awaits</span>
+        <h2>Make Your Visit Special.</h2>
+        <p>Planning a family meal, a get-together or a relaxing afternoon in Kotagala? Send us your reservation request directly through WhatsApp.</p>
+        <a href="#contact" class="btn gold">Contact Our Team →</a>
+
+        <div class="contact-line">
+            📍 Kotagala, Sri Lanka<br>
+            📱 +94 77 818 0155<br>
+            🕒 Please confirm opening hours with the restaurant.
+        </div>
+    </div>
+
+    <form class="form-card reveal" id="bookingForm">
+        <h3>Reserve a Table</h3>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="guestName">Full Name</label>
+                <input id="guestName" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+                <label for="guestPhone">Phone Number</label>
+                <input id="guestPhone" name="phone" type="tel" placeholder="Your phone number" autocomplete="tel" required>
+            </div>
+
+            <div class="field">
+                <label for="bookingDate">Date</label>
+                <input id="bookingDate" name="date" type="date" required>
+            </div>
+
+            <div class="field">
+                <label for="bookingTime">Time</label>
+                <select id="bookingTime" name="time" required>
+                    <option value="">Select time</option>
+                    <option>09:00 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>01:00 PM</option>
+                    <option>02:00 PM</option>
+                    <option>03:00 PM</option>
+                    <option>04:00 PM</option>
+                    <option>05:00 PM</option>
+                    <option>06:00 PM</option>
+                    <option>07:00 PM</option>
+                    <option>08:00 PM</option>
+                </select>
+            </div>
+
+            <div class="field full">
+                <label for="guestCount">Number of Guests</label>
+                <select id="guestCount" name="guests" required>
+                    <option value="">Select guests</option>
+                    <option>1 guest</option>
+                    <option>2 guests</option>
+                    <option>3 guests</option>
+                    <option>4 guests</option>
+                    <option>5 guests</option>
+                    <option>6 guests</option>
+                    <option>7 or more guests</option>
+                </select>
+            </div>
+
+            <div class="field full">
+                <label for="guestMessage">Special Requests (Optional)</label>
+                <textarea id="guestMessage" name="message" rows="3" placeholder="Tell us about your requirements"></textarea>
+            </div>
+
+        </div>
+
+        <button class="btn submit" type="submit">Send Reservation on WhatsApp ↗</button>
+
+        <p class="form-msg" id="bookingMessage" role="status" aria-live="polite">
+            Your reservation is a request and is confirmed only after the restaurant replies.
+        </p>
+    </form>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<div class="container location-grid">
+
+    <div class="location-card reveal">
+        <span class="eyebrow">Find Us</span>
+        <h3>Visit Hilltop Haven</h3>
+
+        <p>
+            <strong>Location:</strong> Kotagala, Sri Lanka<br>
+            <strong>Phone:</strong> +94 77 818 0155<br>
+            <strong>Email:</strong> Add your restaurant email<br>
+            <strong>Opening Hours:</strong> Add confirmed opening hours
+        </p>
+
+        <br>
+
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Kotagala%2C%20Sri%20Lanka" target="_blank" rel="noopener noreferrer">
+            Open Google Maps ↗
+        </a>
+    </div>
+
+    <iframe
+        class="map reveal"
+        title="Map of Kotagala, Sri Lanka"
+        src="https://maps.google.com/maps?q=Kotagala%2C%20Sri%20Lanka&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+    </iframe>
+
+</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+<div class="container">
+    <h2>Stay in the Loop 🌿</h2>
+    <p>Hear about seasonal menus, special events and restaurant news.</p>
+
+    <form id="newsletterForm">
+        <label for="newsletterEmail" style="position:absolute;left:-9999px">Email address</label>
+        <input id="newsletterEmail" type="email" placeholder="Enter your email address" required>
+        <button class="btn" type="submit">Subscribe</button>
+    </form>
+
+    <p id="newsletterMessage" role="status" aria-live="polite" style="margin-top:13px"></p>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+<div class="container">
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>HILLTOP HAVEN.</h3>
+            <p>A hill-country dining experience inspired by Kotagala, Sri Lanka. Good food, warm hospitality and beautiful moments.</p>
+        </div>
+
+        <div>
+            <h3>Explore</h3>
+            <div class="footer-links">
+                <a href="#story">Our Story</a>
+                <a href="#menu">Food Menu</a>
+                <a href="#experience">Experience</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+        </div>
+
+        <div>
+            <h3>Plan Your Visit</h3>
+            <div class="footer-links">
+                <a href="#reservation">Reservations</a>
+                <a href="#contact">Location</a>
+                <a href="https://wa.me/94778180155" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © <span id="currentYear"></span> Hilltop Haven. All rights reserved.
+    </div>
+
+</div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a class="whatsapp"
+   href="https://wa.me/94778180155?text=Hello%20Hilltop%20Haven%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact Hilltop Haven on WhatsApp">☏</a>
+
+<button class="top" id="backTop" aria-label="Back to top">↑</button>
+
+<!-- JAVASCRIPT -->
+<script>
+
+// WhatsApp number: country code + number without the leading zero.
+const WHATSAPP_NUMBER = "94778180155";
+
+// Mobile navigation
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    menuToggle.textContent = open ? "✕" : "☰";
+});
+
+document.querySelectorAll(".navlinks a").forEach(a => {
+    a.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    });
+});
+
+// Dark mode
+const themeToggle = document.getElementById("themeToggle");
+
+try {
+    if (localStorage.getItem("hilltopHavenTheme") === "dark") {
+        document.body.classList.add("dark");
+        themeToggle.textContent = "☀";
+    }
+} catch(e) {}
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    const dark = document.body.classList.contains("dark");
+    themeToggle.textContent = dark ? "☀" : "☾";
+
+    try {
+        localStorage.setItem("hilltopHavenTheme", dark ? "dark" : "light");
+    } catch(e) {}
+});
+
+// Menu category filters
+const filterButtons = document.querySelectorAll(".filter");
+const dishes = document.querySelectorAll(".dish");
+
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const category = btn.dataset.filter;
+
+        dishes.forEach(d => {
+            d.classList.toggle(
+                "hide",
+                category !== "all" && d.dataset.category !== category
+            );
+        });
+    });
+});
+
+// Scroll reveal animation
+const revealItems = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: .12 });
+
+    revealItems.forEach(el => observer.observe(el));
+
+} else {
+    revealItems.forEach(el => el.classList.add("visible"));
+}
+
+// Back to top button
+const backTop = document.getElementById("backTop");
+
+window.addEventListener("scroll", () => {
+    backTop.classList.toggle("show", window.scrollY > 500);
+}, { passive: true });
+
+backTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Set minimum reservation date to today
+const dateInput = document.getElementById("bookingDate");
+const today = new Date();
+
+const localToday = new Date(
+    today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().slice(0, 10);
+
+dateInput.min = localToday;
+
+// WhatsApp reservation form
+document.getElementById("bookingForm").addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const form = event.currentTarget;
+
+    if (!form.reportValidity()) return;
+
+    const data = new FormData(form);
+
+    const details = [
+        "Hello Hilltop Haven!",
+        "",
+        "I would like to request a table reservation.",
+        "",
+        "Name: " + data.get("name"),
+        "Phone: " + data.get("phone"),
+        "Date: " + data.get("date"),
+        "Time: " + data.get("time"),
+        "Guests: " + data.get("guests"),
+        "Special requests: " + (data.get("message") || "None"),
+        "",
+        "Please confirm availability. Thank you!"
+    ].join("\n");
+
+    document.getElementById("bookingMessage").textContent =
+        "Opening WhatsApp. Your reservation is confirmed only after the restaurant replies.";
+
+    window.open(
+        "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(details),
+        "_blank",
+        "noopener,noreferrer"
+    );
+});
+
+// Newsletter form
+document.getElementById("newsletterForm").addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    document.getElementById("newsletterMessage").textContent =
+        "Thanks for your interest! Connect an email marketing service to collect subscriptions.";
+
+    event.currentTarget.reset();
+});
+
+// Automatic copyright year
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+</script>
+</body>
+</html>
+
